@@ -1,0 +1,231 @@
+.ticket{
+	width: 100%;
+	/*height: 1000px;*/
+	background: #efefef;
+}
+.ticket .header{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 45px;
+	width: 100%;
+	text-align: center;
+	padding: 10px 10px 0;
+	box-sizing:border-box;
+	background: #fff;
+	z-index: 2;
+}
+.ticket .header span{
+	font-size: 20px;
+}
+.ticket .header .go-back{
+	float: left;
+}
+.ticket .header .go-back img{
+	width: 13px;
+	height: 20px;
+}
+.ticket .header img{
+	width: 24px;
+	height: 24px;
+}
+.ticket .header .go-home{
+	position: absolute;
+	right: 45px;
+}
+.ticket .header .cotegory{
+	position: absolute;
+	right: 10px;
+}
+/*搜索框*/
+.ticket .search{
+	position: fixed;
+	top:45px;
+	/*left:3%;*/
+	width: 100%;	
+	/*padding-top: 15px;*/
+	margin:0 auto;
+	height: 52px;
+	z-index: 2;
+	background: #efefef;
+}
+.ticket .search img{
+	position: relative;
+	top:21px;
+	left:8%;
+	width: 15px;
+	height: 15px;
+}
+.ticket .search input{
+	padding:5px 0;
+	display: block;
+	margin:0 auto;
+	margin-top: -4px;
+	padding-left: 30px;
+	width: 80%;
+	outline: none;
+	border:1px solid transparent;
+	border-radius: 5px;
+}
+/*轮播图*/
+.ticket .swipe{
+	padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.ticket .swipe-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+}
+.ticket .swipe-container .swipe-li{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    /*flex:none;*/
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.ticket .swipe-container .swipe-li img{
+    width: 100%;
+}
+
+/*广告图片*/
+.ticket .adImg{
+	width: 100%;
+	padding-top: 2px;
+}
+.ticket .adImg img{
+	width: 100%;
+	height: 100px;
+}
+/*精选主题*/
+.ticket .theme{
+	background: #fff;
+}
+.ticket .theme>span{
+	display: block;
+	height: 30px ;
+	line-height: 30px;
+	padding-left: 10px;
+	font-size: 12px;
+	color: #666;
+}
+.ticket .theme ul{
+	border-top: 1px solid #efefef;
+	height: 180px;
+}
+.ticket .theme li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.ticket .theme li img{
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 10px auto;
+}
+.ticket .theme li span{
+	display: block;
+	width: 100%;
+	font-size: 12px;
+	color:#666;
+}
+/*列表*/
+.ticket .list{
+	background: #fff;
+	margin-top: 10px;
+	padding:5px 10px;
+	color: #666;
+}
+.ticket .list .title{
+	padding-bottom: 10px;
+	height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+.ticket .list .introduce{
+	float: right;
+	width: 70%;
+	padding-left: 10px;
+	box-sizing:border-box;
+}
+.ticket .list li {
+	height: 98px;
+}
+.ticket .list li .pic{
+	width: 30%;
+}
+.ticket .list li img{
+	display: block;
+	width: 100%;
+	height: 80px;
+	float: left;
+
+}
+.ticket .list .left{
+	display: inline;
+	float: left;
+	font-size: 12px;
+}
+.ticket .list .left p{
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+.ticket .list .right{
+	float: right;
+	position: absolute;
+	right: 7px;
+}
+.ticket .list .main .mark,.ticket .list .main .fan{
+	color: #d30775;
+    border: 1px solid #d30775;
+    border-radius: 1px;
+}
+.ticket .list .main .hui{
+	color: #ff740d;
+    border: 1px solid #ff740d;
+    border-radius: 1px;
+}
+.ticket .list .notes,.ticket .list .address{
+	display: block;
+	padding-bottom: 5px;
+}
+.ticket .list .notes{
+	padding-top: 5px;
+}
+.ticket .list .right .price{
+	padding-top:20px;
+	padding-right: 10px;
+	color: #d30775;
+	font-size: 18px;
+	font-weight: bold;
+}
+.ticket .list .right .price i{
+	font-style: normal;
+	font-size: 12px;
+}
+.ticket .list .right .price b{
+	font-weight:none;
+	color: #666;
+	font-size: 12px;
+}
+.ticket .list .right .orgin{
+	font-size: 14px;
+	float: right;
+	padding-right: 10px;
+	text-decoration: line-through;
+}

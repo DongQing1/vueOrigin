@@ -1,0 +1,226 @@
+{
+	"errno":0,
+	"data":{
+		"bigFirst":[
+			{
+				"id": 1,
+				"url": "img/icon/01.png"
+			},
+			{
+				"id": 2,
+				"title":"境外门票"
+			},
+			{
+				"id": 3,
+				"title":"境外玩乐"
+			},
+			{
+				"id": 4,
+				"title":"王牌景区"
+			},
+			{
+				"id":5,
+				"title":"国内玩乐"
+			}		
+		],
+		"bigSecond":[
+			{
+				"id": 6,
+				"url": "img/icon/02.png"
+			},
+			{
+				"id": 7,
+				"title":"酒+景"
+			},
+			{
+				"id": 8,
+				"title":"机+酒"
+			}		
+		],
+		"bigThird":[
+			{
+				"id": 9,
+				"url": "img/icon/03.png"
+			},
+			{
+				"id": 10,
+				"title":"国内游"
+			},
+			{
+				"id": 11,
+				"title":"周边游"
+			},
+			{
+				"id": 12,
+				"title":"出境游"
+			},
+			{
+				"id":13,
+				"title":"邮轮"
+			},
+			{
+				"id":14,
+				"title":"驴悦亲子游"
+			},
+			{
+				"id":15,
+				"title":"开心驴行"
+			}			
+		],
+		"bigFourth":[
+			{
+				"id": 16,
+				"url": "img/icon/04.png",
+				"title":"机票"
+			},
+			{
+				"id": 17,
+				"url": "img/icon/05.png",
+				"title":"火车票"
+			},
+			{
+				"id": 18,
+				"url": "img/icon/06.png",
+				"title":"签证"
+			}
+		],
+		"smallIcon":[
+			{
+				"id":1,
+				"img":"img/icon/1.png",
+				"title":"定制游"
+			},
+			{
+				"id":2,
+				"img":"img/icon/2.png",
+				"title":"门票天天特价"
+			},
+			{
+				"id":3,
+				"img":"img/icon/3.png",
+				"title":"自驾游"
+			},
+			{
+				"id":4,
+				"img":"img/icon/4.png",
+				"title":"主题游"
+			},
+			{
+				"id":5,
+				"img":"img/icon/5.png",
+				"title":"会员权益"
+			},
+			{
+				"id":1,
+				"img":"img/icon/6.png",
+				"title":"攻略"
+			},
+			{
+				"id":7,
+				"img":"img/icon/7.png",
+				"title":"礼品卡"
+			},
+			{
+				"id":8,
+				"img":"img/icon/8.png",
+				"title":"更多"
+			}
+		],
+		"huichang":[
+			{
+				"id":1,
+				"url":"img/huichang/1.png"
+			},
+			{
+				"id":2,
+				"url":"img/huichang/2.png"
+			},
+			{
+				"id":3,
+				"url":"img/huichang/3.png"
+			},
+			{
+				"id":4,
+				"url":"img/huichang/4.png"
+			}
+		],
+		"ad":[
+			{
+				"id":1,
+				"url":"img/ad/01.jpg"
+			},
+			{
+				"id":2,
+				"url":"img/ad/02.png"
+			},
+			{
+				"id":3,
+				"url":"img/ad/03.png"
+			},
+			{
+				"id":4,
+				"url":"img/ad/04.png"
+			},
+			{
+				"id":5,
+				"url":"img/ad/05.jpg"
+			},
+			{
+				"id":6,
+				"url":"img/ad/06.jpg"
+			}
+		],
+		"list":[
+			{
+				"id":1,
+				"text":"景点门票",
+				"detail":[
+					{
+						"url":"img/adList/01.jpg",
+						"id":1,
+						"title":"驴妈妈暑期玩水联票【北京版】",
+						"price":99
+					}
+				]
+			},
+			{
+				"id":2,
+				"text":"周边游",
+				"detail":[
+					{
+						"url":"img/adList/02.jpg",
+						"id":1,
+						"title":"【唐山人间天堂“马尔代夫”】住1晚月坨岛水上木屋＋双人往返船票（含门票），蓝天、白云、碧海、温泉，浪漫之约从这里点燃！",
+						"price":488
+					}
+				]
+			},
+			{
+				"id":3,
+				"text":"国内游",
+				"detail":[
+					{
+						"url":"img/adList/03.jpg",
+						"id":1,
+						"title":"婺源、黄山、景德镇双卧5日跟团游",
+						"bewrite":"婺源套票，连线黄山，硬卧往返，可升软卧",
+						"price":1790
+					}
+				]
+			},
+			{
+				"id":4,
+				"text":"出境游",
+				"detail":[
+					{
+						"url":"img/adList/04.jpg",
+						"id":1,
+						"title":"泰国、新加坡、马来西亚9晚11日经典游",
+						"bewrite":"[含北京往返天津高铁费]泰国段全程当五酒店，全程600自费封顶，双岛双园 美食之旅★★★★★",
+						"price":3560
+					}
+				]
+			}
+		]
+	}
+}

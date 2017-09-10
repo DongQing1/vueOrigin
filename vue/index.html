@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, 
+	maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>旅游网</title>
+</head>
+<body>
+	<div id="app">		
+		<router-view></router-view>	
+	</div>
+	<!-- 首页 -->
+	<template id="tpl_home">
+		<section id="home" class="home">
+			<!-- 头部 -->
+			<div class="index-header clearfix">
+				<!-- 地址 -->
+				<div class="address">
+					<span>北京</span>
+					<div class="arrow">
+						<div class="white-arrow"></div>
+					</div>
+				</div>
+				<!-- 搜索框 -->
+				<div class="search">
+					<img src="img/icon/fangdajing.png" alt="">
+					<input type="text" placeholder="目的地/景点/酒店/邮轮">
+				</div>
+				<span class="myself"><img src="img/icon/myself.png" alt=""></span>
+			</div>
+			<!-- 轮播图 -->			
+			<div class="swipe">
+        		<ul class="swipe-container">
+            		<li  class="swipe-li" v-for="(item,index) in banners">
+               			<a href=""><img :src="'img/banner/'+ item.url" alt=""></a>
+           			</li>
+        		</ul>
+    		</div>
+			<!-- 大图标 -->
+			<div class="bigIcon clearfix">
+				<ul class="bigFirst clearfix">
+					<li v-for="(item,index) in bigFirst">
+						<a :href="'#/ticket/'+item.id">
+							<img :src="item.url" v-if="item.url" alt="">
+							<span v-if="item.title">{{item.title}}</span>
+						</a>						
+					</li>
+				</ul>
+				<ul class="bigSecond clearfix">
+					<li v-for="(item,index) in bigSecond">
+						<a :href="'#/ticket/'+item.id">
+							<img :src="item.url" v-if="item.url" alt="">
+							<span v-if="item.title">{{item.title}}</span>
+						</a>						
+					</li>
+				</ul>
+				<ul class="bigThird clearfix">
+					<li v-for="(item,index) in bigThird">
+						<a :href="'#/ticket/'+item.id">
+							<img :src="item.url" v-if="item.url" alt="">
+							<span v-if="item.title">{{item.title}}</span>
+						</a>						
+					</li>
+				</ul>
+				<ul class="bigFourth clearfix">
+					<li v-for="(item,index) in bigFourth">
+						<a :href="'#/ticket/'+item.id">							
+							<span><img :src="item.url" alt="">{{item.title}}</span>
+						</a>						
+					</li>
+				</ul>
+			</div>
+			<!-- 小导航 -->
+			<ul class="smallIcon clearfix">
+				<li v-for="(item,index) in smallIcon">
+					<a href="">
+						<img :src="item.img" alt="">
+						<span>{{item.title}}</span>
+					</a>
+				</li>
+			</ul>
+			<!-- 会场 -->
+			<div class="huichang">
+				<a href=""><div class="main"><img src="img/huichang/5.jpg" alt=""></div></a>
+				<ul class="branch clearfix">
+					<li v-for="(item,index) in huichang">
+						<a href=""><img :src="item.url" alt=""></a>
+					</li>
+				</ul>
+			</div>
+			<!-- 活动推荐 -->
+			<div class="ad">
+				<span>活动推荐</span>
+				<ul class="bd clearfix">
+					<li v-for="(item,index) in ad">
+						<a href=""><img :src="item.url" alt=""></a>
+					</li>
+				</ul>
+			</div>
+			<!-- 列表 -->
+			<div class="adList">
+				<ul class="bd clearfix">
+					<li v-for="item in list" @click="listOrder(item.id)">
+						<span :class="{active:chooseId===item.id}">{{item.text}}</span>
+						<ul class="bdList clearfix" v-show="chooseId===item.id">
+							<li v-for="item1 in item.detail">
+								<a href="">
+									<span><img src="img/adList/05.png" alt=""></span>
+									<div class="price">
+										<p>¥<i>{{item1.price}}</i>起</p>
+									</div>
+									<img :src="item1.url" alt="">
+									<p>{{item1.title}}</p>
+									<p class="bewrite" v-show="item1.bewrite">{{item1.bewrite}}</p>
+								</a>
+							</li>
+						</ul>
+					</li>				
+				</ul>			
+			</div>
+		</section>
+	</template>
+	<!-- 门票页 -->
+	<template id="tpl_ticket">
+		<section id="ticket" class="ticket">
+			<!-- 头部 -->
+			<div class="header clearfix">
+				<a href="#/home"><span class="go-back"><img src="img/icon/back.png" alt=""></span></a>
+				<span>景点门票</span>
+				<a href="#/home"><span class="go-home"><img src="img/icon/home.png" alt=""></span></a>
+				<a href=""><span class="cotegory"><img src="img/icon/menu.png" alt=""></span></a>
+			</div>
+			<!-- 搜索框 -->
+			<div class="search">
+				<img src="img/icon/fangdajing.png" alt="">
+				<input type="text" placeholder="景点名称/城市/主题">
+			</div>
+			<!-- 轮播图 -->
+			<div class="swipe">
+        		<ul class="swipe-container">
+            		<li  class="swipe-li" v-for="(item,index) in banners">
+               			<a href=""><img :src="'img/banner/'+ item.url" alt=""></a>
+           			</li>
+        		</ul>
+    		</div>
+			<!-- 广告图片 -->
+			<div class="adImg">
+				<a href=""><img src="img/ad/10.jpg" alt=""></a>
+			</div>
+			<div class="theme">
+				<span>精选主题</span>
+				<ul class="">
+					<li v-for="item in theme">
+						<a :href="'#/drift/'+item.id">
+							<img :src="item.url" alt="">
+							<span>{{item.text}}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="list">
+				<div class="title">热门景点</div>
+				<ul class="clearfix">
+					<li v-for="item in list">
+						<div class="pic"><img :src="item.url" alt=""></div>
+						<div class="introduce">
+							<div class="left">
+								<p class="name">{{item.name}}</p>
+								<div class="main">
+									<span class="hui" v-if="item.hui">{{item.hui}}</span>
+									<span class="mark">{{item.mark}}</span>
+									<span class="fan" v-if="item.fan">{{item.fan}}</span>
+								</div>
+								<span class="notes">{{item.notes}}</span>
+								<span class="address">{{item.address}}</span>
+							</div>
+							<div class="right">
+								<p class="price"><i>¥</i>{{item.price}}<b>起</b></p>
+								<p class="orgin">¥{{item.orgin}}</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</template>
+	<!-- 漂流戏水 -->
+	<template id="tpl_play">
+		<section id="play" class="play">
+			<!-- 头部 -->
+			<div class="header clearfix">
+				<a href="#/ticket/1"><span class="go-back"><img src="img/icon/back.png" alt=""></span></a>
+				<!-- 搜索框 -->
+				<div class="search ">
+					<img src="img/icon/fangdajing.png" alt="">
+					<input type="text" placeholder="漂流北京">
+				</div>
+			</div>
+			<!-- 导航栏	 -->
+			<ul class="orders">
+				<li v-for="item in orders" :data-id="item.id" @click=" listOrder(item.id)">
+					<span>{{item.text}}</span>
+					<span class="arrow"></span>
+				</li>
+			</ul>
+			<!-- 列表 -->
+			<div class="list">
+				<ul class="clearfix">
+					<li v-for="item in list">
+						<a :href="'#/detail/'+item.id">
+							<div class="pic"><img :src="item.url" alt=""></div>
+							<div class="introduce">
+								<div class="left">
+									<p class="name">{{item.name}}</p>
+									<div class="main">
+										<span class="hui" v-if="item.hui">{{item.hui}}</span>
+										<span class="mark" v-if="item.mark">{{item.mark}}</span>
+										<span class="fan" v-if="item.fan">{{item.fan}}</span>
+									</div>
+									<span class="notes">{{item.notes}}%满意</span>
+									<span class="address">{{item.address}}</span>
+								</div>
+								<div class="right">
+									<p class="price"><i>¥</i>{{item.price}}<b>起</b></p>
+									<p class="orgin">¥{{item.orgin}}</p>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</template>
+	<!-- 详情页 -->
+	<template id="tpl_detail">
+		<section id="detail" class="detail">
+			<!-- 头部 -->
+			<div class="header clearfix">
+				<a href="#/drift/1"><span class="go-back"><img src="img/icon/back.png" alt=""></span></a>
+				<span class="title">{{data.title}}</span>
+				<a href=""><span class="collection"><img src="img/icon/collection.png" alt=""></span></a>
+				<a href="#/home"><span class="go-home"><img src="img/icon/home.png" alt=""></span></a>
+				<a href=""><span class="cotegory"><img src="img/icon/menu.png" alt=""></span></a>
+			</div>
+			<!-- 大图 -->
+			<div class="pic">
+				<img :src="'img/detail/01.jpg'" alt="">
+				<span class="pic-name">{{data.title}}</span>
+				<div class="address">
+					<img src="img/icon/address.png" alt="">{{data.address}}<a href=""></a></div>
+				<div class="characteristic"><img src="img/icon/introduction.png" alt="">景点特色<a href=""><span>&gt;</span></a></div>
+				<div class="promise"><img src="img/icon/red-right.png" alt="">保证入园</div>
+			</div>
+			<ul class="nav">
+				<li><a href="#opened"><span class="order">订票</span></a></li>
+				<li><a href="#notes"><span class="">点评</span></a></li>
+				<li><a href="#notice"><span class="">须知</span></a></li>
+			</ul>
+			<div id="opened">
+				<ul class="clearfix">
+					<li v-for="item in list">
+						<div class="show">
+							<span class="title">{{item.title}}</span>
+							<span class="time"><img src="img/icon/blue-right.png" alt="">17:00前可订今日票<img src="img/icon/blue-right.png" alt="">条件退</span>
+							<span class="tips">立减{{item.money}}元</span>
+							<span class="explain">订票须知<i>&gt;</i></span>
+						</div>
+						<div class="right">
+							<div class="rprice">
+								<span class="orgin">¥{{item.orgin}}</span>
+								<span class="price"><i>¥{{item.price}}</i>起</span>
+							</div>
+							<div class="btn">
+								<a href="#/pay/1">
+									<span class="order">预定</span>
+									<span class="pay">在线支付</span>
+								</a>
+							</div>
+						</div>					
+					</li>
+				</ul>
+			</div>
+			<div id="notes">
+				<div class="first">
+					<img src="img/icon/firstComment.png" alt="">
+					<span class="notes">满意度<i>{{data.notes}}</i></span>
+				</div>
+				<div class="content">
+					<span class="popular">人气{{data.popular}}分</span>
+					<span class="big">规模{{data.big}}分</span>
+					<span class="see">观光{{data.see}}分</span>
+					<span class="service">服务{{data.service}}分</span>
+				</div>
+				<div class="bottom">
+					<p class="username">lv71052078</p>
+					<p class="msg">非常不错的选择，下次还会再来</p>
+					<p class="time">2017-08-13 14:17:00</p>
+				</div>
+				<a href=""><p class="more">查看全部点评</p></a>
+			</div>
+			<div id="notice">
+				<div class="title"><img src="img/icon/notice.png" alt=""><span>景区须知</span></div>
+				<div class="bottom">
+					<div class="time">开放时间<span>8:00-17:00</span></div>
+					<div class="free">免费政策<span>景区规定统一售价，暂无其他免费政策</span></div>
+				</div>
+				<p>查看全部</p>
+			</div>
+		</section>
+	</template>
+	<!-- 支付页 -->
+	<template id="tpl_pay">
+		<section id="pay" class="pay">
+			<!-- 头部 -->
+			<div class="header clearfix">
+				<a href="#/detail/1"><span class="go-back"><img src="img/icon/back.png" alt=""></span></a>
+				<span class="title">订单填写</span>
+			</div>
+			<p class="login">有账号可先<a href="">登录</a>享受更多优惠</p>
+			<div class="relative">
+				<span class="title">{{data.title}}</span>
+				<span class="price"><i>¥</i>{{data.price}}</span>
+				<a href=""><p>入园须知、退改说明&gt;</p></a>
+			</div>
+			<div class="day">
+				<span class="date">游玩日期</span>
+				<div class="money">
+					<span class="today">今天不可订</span>
+					<span class="tomorrow">明天</span>
+					<span class="more">更多日期</span>
+				</div>
+			</div>
+			<div class="sum">
+				<span>数量</span>
+				<ul class="shopping clearfix">
+					<li class="reduce" @click="reduce();">-</li>
+					<li class="num">{{num}}</li>
+					<li class="add" @click="add();">+</li>
+				</ul>
+			</div>
+			<div class="regist">
+				<div class="information">
+					<span>取票人信息</span><span class="tips">(请补全取票人信息)</span>
+				</div>		
+				<div class="name">
+					<span class="left">姓名</span>
+					<input type="text" placeholder="必填" v-model="name" @keyup="checkName">
+					<span class="check" v-show="nameCheck">需包含汉字</span>
+				</div>
+				<div class="tel">
+					<span class="left">手机号</span>
+					<input type="text" placeholder="请输入11位手机号" v-model="tel" @keyup="checkTel">
+					<span class="check"  v-show="telCheck">请输入正确的手机号</span>
+				</div>
+				<div class="right">
+					<span class="left">校验码</span><input type="text" placeholder="请输入图形验证码"><span></span><img src="img/icon/rest.jpg" alt="">
+				</div>	
+				<span class="submit">提交订单</span>		
+			</div>
+		</section>
+	</template>
+<script type="text/javascript" src="static/lib/require.js"></script>
+<!-- 引入配置 -->
+<script type="text/javascript" src="static/lib/config.js"></script>
+<!-- 引入口文件 -->
+<script type="text/javascript">
+	require(['vm/app']);
+</script>
+</body>
+</html>

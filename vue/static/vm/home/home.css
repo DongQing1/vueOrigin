@@ -1,0 +1,349 @@
+.index-header{
+	/*height: 45px;*/
+	position: relative;
+	margin: 10px 0;
+}
+.home .address{
+	float: left;
+	width: 17%;
+	margin-left: 2%;
+	margin-top: 6px;
+}
+.home .address span{
+	float: left;
+	font-size: 14px;
+    color: #d30775;
+}
+.home .address .arrow{
+	width: 0;
+    height: 0;
+    font-size: 0;
+    border: 6px solid transparent;
+    border-top-color: #d30775;
+    position: relative;
+    top: 6px;
+    left: 30px;
+}
+.home .address .arrow .white-arrow{
+	position: absolute;
+    top: -10px;
+    left: -8px;
+    border: 8px solid transparent;
+    border-top-color: #fff;
+}
+/*搜索框*/
+.home .search{  
+    float: left;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    width: 65%;
+    position: relative;
+    overflow: hidden;
+}
+.home .search img{
+	display: block;
+	float: left;
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+	position: relative;
+	top:50%;
+	margin-top:7.5px;
+	margin-right: 5px;
+}
+.home .search input{
+    color: #aaa;
+    font-size: 15px;
+    width: 80%;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+.home .myself{
+	float: right;	
+	margin-right: 4%;
+	margin-top: 6px;
+}
+.home .myself img{
+	display: block;
+	width: 21px;
+	height: 22px;
+}
+/*轮播图*/
+.home .swipe{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+}
+.home .swipe-container{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    display: flex;
+}
+.home .swipe-container .swipe-li{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    /*flex:none;*/
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.home .swipe-container .swipe-li img{
+    width: 100%;
+}
+
+/*大导航*/
+.bigIcon{
+	padding-left:1%;
+	width: 100%;
+	background: #efefef;
+	box-sizing:border-box;
+}
+.bigIcon li{
+	float: left;
+	width: 32%;
+	margin-right: 1%;
+}
+.bigIcon img{
+	width: 100%;
+}
+.bigIcon span{
+	display: block;	
+	height: 56px;	
+	margin-bottom: 4px;
+	color:#fff;
+	text-align: center;
+	line-height: 56px;
+}
+.bigIcon .bigFirst span{
+	background: #ec4c40;
+}
+.bigIcon .bigFirst li:first-child{
+	width: 33%;
+	padding-bottom: 1px solid #efefef;
+}
+.bigIcon .bigFirst li:first-child img{
+	height: 115px;
+}
+.bigIcon .bigFirst li:nth-child(3) span{
+	border-top-right-radius: 5px;
+}
+.bigIcon .bigFirst li:nth-child(5) span{
+	border-bottom-right-radius: 5px;
+}
+.bigIcon .bigSecond span{
+	background: #f8791c;
+	height: 73.39px;
+	line-height: 73.39px;
+}
+.bigIcon .bigSecond li:first-child{
+	width: 33%;	
+}
+.bigIcon .bigSecond li:first-child img{
+	height: 72px;
+}
+.bigIcon .bigSecond li:nth-child(3) span{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.bigIcon .bigThird span{
+	background: #7ec553;
+}
+.bigIcon .bigThird li:first-child{
+	width: 33%;
+}	
+.bigIcon .bigThird li:first-child img{
+	height: 175px;
+}
+.bigIcon .bigThird li:nth-child(3) span{
+	border-top-right-radius: 5px;
+}
+.bigIcon .bigThird li:nth-child(7) span{
+	border-bottom-right-radius: 5px;
+}
+.bigIcon .bigFourth li:first-child{
+	width: 33%;
+}
+.bigIcon .bigFourth img{
+	width: 30px;
+	height: 30px;
+	position: relative;
+	top:7px;
+}
+.bigIcon .bigFourth span{
+	background: #5598dc;
+}
+.bigIcon .bigFourth li:nth-child(1) span{
+	border-top-left-radius: 5px;
+}
+.bigIcon .bigFourth li:nth-child(1) span{
+	border-bottom-left-radius: 5px;
+}
+.bigIcon .bigFourth li:nth-child(3) span{
+	border-top-right-radius: 5px;
+}
+.bigIcon .bigFourth li:nth-child(3) span{
+	border-bottom-right-radius: 5px;
+}
+
+/*小导航*/
+.smallIcon{
+	margin-top: 10px;
+}
+.smallIcon li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.smallIcon li img{
+	width: 41px;
+	height: 41px;
+}
+.smallIcon li span{
+	display: block;
+	width: 100%;
+	font-size: 13px;
+}
+.smallIcon li:last-child img{
+	width: 41px;
+	height: 41px;
+	border-radius: 18px;
+	background-color: #5c9ffb;
+}
+
+/*会场*/
+.huichang {
+	width: 100%;
+	border-top: 6px solid #efefef;
+	background: url("../../../img/huichang/6.jpg") no-repeat;	
+}
+.huichang .main img{
+	width: 100%;
+}
+.huichang .branch{
+	padding:10px 20px;
+}
+.huichang .branch li img{
+	width: 25%;
+	float: left;
+}
+
+/*广告*/
+.ad{
+	width: 100%;
+	border-top: 6px solid #efefef;
+	border-bottom: 6px solid #efefef;
+}
+.ad span{
+	display: block;
+	height: 47px;
+    line-height: 47px;
+    color: #589adc;
+    text-align: center;
+    font-size: 15px;
+    border-bottom:  1px solid #efefef;
+}
+.ad .bd{
+	width: 100%;
+}
+.ad .bd li{
+	float: left;
+	width: 50%;
+	border-bottom: 1px solid #efefef;
+	box-sizing:border-box;
+}
+.ad .bd li:nth-child(2n+1){
+	border-right: 1px solid #efefef;
+}
+.ad .bd li img{
+	width: 100%;
+	display: block;
+}
+
+/*列表*/
+.adList .bd{
+	padding-top: 10px;
+}
+.adList .bd li{
+	text-align: center;
+	position: relative;
+}
+.adList .bd li span{
+	display: block;
+	float: left;
+	width: 25%;
+	height: 30px;
+	padding-bottom: 10px;
+	line-height: 30px;
+}
+.active{
+	background: #d30775;
+	border-radius: 20px;
+	color:#fff;
+	box-sizing:border-box;
+}
+.bd .bdList{
+	position: absolute;
+	top:40px;
+	left:0px;
+	width: 100%;
+}
+.bd .bdList li{
+	float: left;
+	width: 100%;
+}
+.bd .bdList li span {
+	position: absolute;
+	right:10px;
+	top:10px;
+	width: 49px;
+	height: 44px;
+}
+.bd .bdList li span img{
+	width: 100%;
+	height: 100%;
+}
+.bd .bdList li p{
+	font-size: 14px;
+	overflow: hidden;
+}
+.bd .bdList .price{
+	background: #ff720e;
+	position: absolute;
+	right: 0px;
+	top:100px;
+	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.bd .bdList .price p{
+	font-size: 12px;
+	padding: 5px 10px;
+	color: #fff;
+}
+.bd .bdList .price i{
+	font-size: 20px;
+	font-style: normal;
+}
+.bd .bdList li img{
+	width: 100%;
+	display: block;
+	height: 150px;
+}
+.bd .bdList .bewrite{
+	font-size: 12px;
+    color: #666;
+    line-height: 16px;
+    overflow: hidden;
+}

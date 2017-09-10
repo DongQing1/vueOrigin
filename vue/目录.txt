@@ -1,0 +1,6 @@
+img
+static:lib
+	router
+	vm:
+app.js
+index.html

@@ -1,0 +1,82 @@
+{
+	"errno":0,
+	"data":{
+		"list":[
+			{
+				"id":1,
+				"url":"img/playList/01.jpg",
+				"name":"十渡聚龙湾",
+				"mark":"优惠",
+				"hui":"农行享立减",
+				"fan":"返¥3",
+				"notes":95.3,
+				"address":"北京 房山区",
+				"price":19.9,
+				"orgin":140,
+				"distance":100
+			},
+			{
+				"id":2,
+				"url":"img/playList/02.jpg",
+				"name":"北京雾灵西峰高山滑水景区",
+				"mark":"优惠",
+				"hui":"农行享立减",
+				"fan":"返¥6",
+				"notes":97.6,
+				"address":"北京 密云县",
+				"price":35,
+				"orgin":40,
+				"distance":40
+			},
+			{
+				"id":3,
+				"url":"img/playList/03.jpg",
+				"name":"十渡龙湖湾景区",
+				"mark":"优惠",
+				"hui":"驴悦亲子",
+				"notes":96.8,
+				"address":"北京 北京",
+				"price":50,
+				"orgin":100,
+				"distance":70
+			},
+			{
+				"id":4,
+				"url":"img/playList/04.jpg",
+				"name":"十渡拒马河乐园",
+				"mark":"优惠",
+				"hui":"农行享立减",
+				"notes":95.0,
+				"address":"北京 房山区",
+				"price":88,
+				"orgin":140,
+				"distance":30
+			},
+			{
+				"id":5,
+				"url":"img/playList/05.jpg",
+				"name":"十渡乐谷银滩景区",
+				"hui":"驴悦亲子",
+				"fan":"返¥1",
+				"notes":93.2,
+				"address":"北京 北京",
+				"price":45,
+				"orgin":69,
+				"distance":70
+			},
+			{
+				"id":6,
+				"url":"img/playList/06.jpg",
+				"name":"黄花城水长城",
+				"hui":"农行享立减",
+				"mark":"优惠",
+				"fan":"返¥1",
+				"notes":95,
+				"address":"北京 北京 3A景区",
+				"price":40,
+				"orgin":45,
+				"distance":90
+			}
+		]	
+	}
+}
